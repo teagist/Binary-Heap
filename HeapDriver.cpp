@@ -44,10 +44,10 @@ void printMenu()
 {
     cout << " _____________________________" << endl;
     cout << "| +Item  | Insert Item        | " << endl;
-	cout << "|   -    | Delete Item        | " << endl;
+    cout << "|   -    | Delete Item        | " << endl;
     cout << "| ?Item  | Search Item        | " << endl;
     cout << "|   @    | Extract Min Value  | " << endl;
-	cout << "|   D    | Destory the Heap   | " << endl;
+    cout << "|   D    | Destory the Heap   | " << endl;
     cout << "|________|____________________| " << endl << endl;
     cout << "Please choose an operation to perform on the heap." << endl;
     cout << "Enter Q to quit." << endl;	
@@ -100,8 +100,8 @@ void choose(BinaryHeap<T> &myHeap)
 			case '?':
 				if (hasInserted)
 				{
-	                validateInput(data);
-	                if (myHeap.Search(data))
+	                		validateInput(data);
+	                		if (myHeap.Search(data))
 						cout << endl << data << " is in the heap!" << endl;
 					else
 						cerr << endl << data << " is not in the heap." << endl;
@@ -142,10 +142,10 @@ void choose(BinaryHeap<T> &myHeap)
 				}
 				break;
 				
-            case 'q': case 'Q':
-                exit(1);
+            	       case 'q': case 'Q':
+                                exit(1);
                 
-			default:
+		       default:
 				cout << "\nInvalid choice. Please try again." << endl;
 				cout << endl;
                 system("pause");
@@ -189,7 +189,7 @@ T validateInput(T &value)
 			system("cls");
 			printMenu();
 			cerr << endl << "Please enter a valid item for the heap." << endl;
-        	cout << endl << ">> value: ";
+        	        cerr << endl << ">> value: ";
 		}
 	}
 	return value;
